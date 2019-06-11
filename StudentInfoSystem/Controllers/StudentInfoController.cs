@@ -11,7 +11,7 @@ namespace StudentInfoSystem.Controllers
     {
 		public IEnumerable<string> GetStudentDetails()
 		{
-			return new string[] { "Ambrish","Singh"};
+			return new string[] { "Test1","Test2"};
 		}
     }
 }
