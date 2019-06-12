@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentInfoSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,9 +10,16 @@ namespace StudentInfoSystem.Controllers
 {
     public class StudentInfoController : ApiController
     {
-		public IEnumerable<string> GetStudentDetails()
+		public IEnumerable<StudentModel> GetStudentDetails()
 		{
-			return new string[] { "Test1","Test2"};
+			List<StudentModel> listModel = new List<StudentModel>();
+			StudentModel firstInfo = new StudentModel();
+			firstInfo.StudentId = 1;
+			firstInfo.FirstName = "A";
+			firstInfo.LastName = "B";
+			listModel.Add(firstInfo);
+
+			return listModel;
 		}
     }
 }
